@@ -4,11 +4,11 @@ import data from './dataOfGallery'
 import { motion } from 'framer-motion'
 
 const Gallery: React.FC = () => {
-  const countPictures: number = 12
+  const countPictures: number = 13
   const [arrayOfNumber, changeArrayOfNumber] = useState<number[]>([])
 
   const mix: Function = (arrayOfNumber: number[]) => {
-    for(let i = 0; i <= countPictures; i++) {
+    for(let i = 1; i <= countPictures; i++) {
       arrayOfNumber.push(i)
     }
 
@@ -26,8 +26,6 @@ const Gallery: React.FC = () => {
     return arrayOfNumber
   }
 
-  console.log(arrayOfNumber)
-
   return (
     <motion.div 
     onViewportEnter={() => changeArrayOfNumber(mix(arrayOfNumber))}
@@ -38,9 +36,17 @@ const Gallery: React.FC = () => {
       </div>
       <div className={style.grid}>
         {
+          
           arrayOfNumber.map((value, index) => {
+            const image: string = require('../images/gallery'+value+'.jpg')
+            // const linkToImage: string = Object.entries(data)[value][1].linkPicture
+            // console.log(linkToImage)
+            // const image1: string = require(linkToImage)
             return (
-              <div>{Object.entries(data)[value][1].linkPicture}</div>
+              <div>
+                <img src={image} alt="" />
+                <div>{Object.entries(data)[value-1][1].namePicture}</div>
+              </div>
             )
           })
         }
