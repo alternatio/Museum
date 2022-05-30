@@ -154,7 +154,6 @@ const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
             })
           }
         </motion.div>
-        {/* <Link to={props.linkMuseums[props.numberOfPage-1]+'/'+'tickets'}> */}
         <button 
         onClick={() => switchPopupIsOpen(true)}
         className={style.buttonTickets}>
