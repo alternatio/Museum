@@ -4,11 +4,11 @@ import data from './dataOfGallery'
 import { motion } from 'framer-motion'
 
 const Gallery: React.FC = () => {
-  const countPictures: number = 13
+  const countPictures: number = 12
   const [arrayOfNumber, changeArrayOfNumber] = useState<number[]>([])
 
   const mix: Function = (arrayOfNumber: number[]) => {
-    for(let i = 1; i <= countPictures; i++) {
+    for(let i = 0; i <= countPictures; i++) {
       arrayOfNumber.push(i)
     }
 
@@ -38,8 +38,11 @@ const Gallery: React.FC = () => {
       </div>
       <div className={style.grid}>
         {
-          // Object.entries(data)[0][1].linkPicture
-          arrayOfNumber
+          arrayOfNumber.map((value, index) => {
+            return (
+              <div>{Object.entries(data)[value][1].linkPicture}</div>
+            )
+          })
         }
       </div>
     </motion.div>
