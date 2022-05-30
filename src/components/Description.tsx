@@ -139,14 +139,14 @@ const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
           {
             arrayContactsDataKeys.map((value, index) => {
               return (
-                <div className={style.lineText}>
-                  <span className={style.lineTextHead}>
+                <>
+                  <span>
                     {arrayContactsDataKeys[index]}
                   </span>
                   <span>
                     {arrayContactsDataValues[index]}
                   </span>
-                </div>
+                </>
               )
             })
           }
