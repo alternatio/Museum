@@ -46,6 +46,7 @@ const Gallery: React.FC = () => {
             // not working in 'require'
             // console.log(Object.entries(data)[value-1][1].linkPicture)
             // > '../images/gallery3.jpg'
+            // :\
 
             const imageLink: string = require(`../images/gallery${value}.jpg`)
             const imageName: string = Object.entries(data)[value-1][1].namePicture

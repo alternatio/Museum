@@ -79,8 +79,6 @@ const Events: React.FC<EventsProps> = ({changeCursorEvent, changeContentShow}) =
         <div className={style.devider}></div>
         <button 
         className={style.more__button}
-        // onMouseEnter={() => changeCursorEvent('pointer')}
-        // onMouseLeave={() => changeCursorEvent('')}
         onClick={() => switchMore(!more)}
         >
           {more ? <>Меньше</> : <>Больше</>}
