@@ -13,7 +13,7 @@ const OnView: React.FC<OnViewProps> = ({children, delay, scale}) => {
     initial='hidden'
     whileInView='visible'
     viewport={{once: true}}
-    transition={{duration: 1, delay: delay, type: 'ease'}}
+    transition={{duration: 1, delay: delay, type: 'tween'}}
     variants={{
       visible: {opacity: 1, scale: 1},
       hidden: {opacity: 0, scale: scale}

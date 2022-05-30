@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import style from '../styles/Description.module.css'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import textOfDescription from './dataOfDescription'
 import textOfSmallBlocks from './dataOfSmallBlocks'
 import textContacts from './dataOfContacts'
 import OnView from './OnView';
-import { Link } from 'react-router-dom';
+import data from './dataOfTickets'
 
 interface DescriptionProps {
   numberOfPage: number
@@ -78,13 +78,59 @@ const SmallBlock: React.FC<BlockProps> = (props: BlockProps) => {
 }
 
 const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
+
   let pureContactsData: object = Object.entries(textContacts)[props.numberOfPage-1][1]
   let arrayContactsDataKeys: string[] = Object.keys(pureContactsData)
   let arrayContactsDataValues: string[] = Object.values(pureContactsData)
 
+  const [popupIsOpen, switchPopupIsOpen] = useState<boolean>(false)
+
+  const pureData: string[] = Object.entries(data)[props.numberOfPage-1][1]
+  const arrayOfPureDataKeys: string[] = Object.keys(pureData)
+  const arrayOfPureDataValues: string[] = Object.values(pureData)
+
   return (
     <OnView delay={.5}>
       <div className={style.Description}>
+        <AnimatePresence>
+          {popupIsOpen && (
+            <motion.div
+            onClick={() => switchPopupIsOpen(false)}
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            transition={{type:'tween', duration: .5}}
+            className={style.popupBackground}>
+              <motion.div
+              initial={{y:'-100%'}}
+              animate={{y:0}}
+              exit={{y:'-100%'}}
+              transition={{type:'easy-in-out', duration:.5}}
+              className={style.popup}>
+                <div className={style.popupHead}>
+                  Билеты
+                </div>
+                <div className={style.popupMain}>
+                  {arrayOfPureDataKeys.map((value, index) => {
+                      return (
+                        <div className={style.popupMain__line}>
+                          <div className={style.popupMain__key}>
+                            {arrayOfPureDataKeys[index]}
+                          </div>
+                          <div className={style.popupMain__value}>
+                            {arrayOfPureDataValues[index]}
+                          </div>
+                        </div>
+                      )
+                  })}
+                </div>
+                <button className={style.popupButton}>
+                  Купить билеты
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className={style.head}>
           Где мы?
         </div>
@@ -106,9 +152,11 @@ const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
           }
         </motion.div>
         {/* <Link to={props.linkMuseums[props.numberOfPage-1]+'/'+'tickets'}> */}
-        {/* <Link to={'tickets'}>
+        <button 
+        onClick={() => switchPopupIsOpen(true)}
+        className={style.buttonTickets}>
           Купить билеты
-        </Link> */}
+        </button>
       </div>
     </OnView>
   )
