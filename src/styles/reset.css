@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+::selection {
+  background: #f35;
+}
+
+a {
+  cursor: none;
+  color: #111;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: none;
+  color: #111;
+  transition: .2s ease-in;
+  border-radius: .25rem;
+}
+button:hover {
+  opacity: .6;
+}
+
+html {
+  font-size: 17px;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 3vw;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

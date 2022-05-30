@@ -1,0 +1,8 @@
+.Button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.Button[content='true'] {
+  border: solid 1px #111;
+}

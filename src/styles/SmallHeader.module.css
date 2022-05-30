@@ -1,0 +1,37 @@
+.SmallHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: min(100%, 120rem);
+  padding: 0 3rem;
+}
+
+.logo {
+  border-bottom: #111 solid 1px;
+  padding: 0 3rem;
+}
+.logo, .logo > span {
+  font-family: Playfair;
+  font-size: 1rem;
+  transition: .2s ease-in;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  line-height: 3rem;
+}
+.logo:hover, .logo:hover > span {
+  background: #111;
+  color: #fff;
+}
+.logo > span {
+  font-style: italic;
+}

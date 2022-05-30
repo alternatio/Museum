@@ -1,0 +1,93 @@
+.Footer {
+  padding-top: 3rem;
+  background: #fff;
+  color: #111;
+}
+.Footer:not([content='0']) {
+  background: #111;
+  color: #fff;
+}
+
+.marquee {
+  padding: 0 5rem;
+  font-family: Playfair;
+  font-size: 6rem;
+  font-variant-caps: small-caps;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+  display: inline-block;
+  will-change: transform;
+  padding-left: 100%;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.contacts {
+  margin: 4rem 0 2rem 0;
+  padding: 0 4rem 0 5rem;
+  width: min(90%, 80rem);
+  border-right: solid #111 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contacts:not([content='0']) {
+  border-right: solid #fff 1px;
+}
+.mail, .director {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.director {
+  align-self: end;
+  text-align: right;
+}
+.button {
+  border: #111 solid 1px;
+  width: fit-content;
+  padding: 1rem 4rem;
+  font-size: 1.2rem;
+  font-family: Plyfair;
+  font-weight: 400;
+  text-transform: uppercase;
+  align-self: end;
+  background: #fff;
+  color: #111;
+}
+.button:hover {
+  opacity: 1;
+  color: #fff;
+  background: #111;
+  border: #fff solid 1px;
+}
+
+.bottom {
+  width: 100%;
+  height: 10rem;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  font-size: 1rem;
+}
+.bottom:not([content='0']) {
+  background: #fff;
+  color: #111;
+}
+.bottom > span {
+  text-transform: uppercase;
+}

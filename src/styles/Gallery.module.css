@@ -1,0 +1,12 @@
+.Gallery {
+  background: #111;
+  color: #fff;
+  margin-top: 3rem;
+}
+.head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  font-size: 4rem;
+}
