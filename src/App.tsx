@@ -57,7 +57,7 @@ const HomePage: React.FC<HomePageProps> = (props: HomePageProps) => {
   )
 }
 const PageOfMuseum: React.FC<PageOfMuseumProps> = (props: PageOfMuseumProps) => {
-  const [headerVisible, switchHeaderVisible] = useState(false)
+  const [headerVisible, switchHeaderVisible] = useState(true)
 
   return (
     <>

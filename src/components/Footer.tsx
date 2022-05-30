@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
           2022
         </span>
         <span>
-          Figuralis
+          Alternatio
         </span>
       </div>
     </div>

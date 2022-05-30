@@ -6,6 +6,7 @@ import textOfSmallBlocks from './dataOfSmallBlocks'
 import textContacts from './dataOfContacts'
 import OnView from './OnView';
 import data from './dataOfTickets'
+import cost from './dataOfTicketsLinks'
 
 interface DescriptionProps {
   numberOfPage: number
@@ -105,7 +106,7 @@ const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
               initial={{y:'-100%'}}
               animate={{y:0}}
               exit={{y:'-100%'}}
-              transition={{type:'easy-in-out', duration:.5}}
+              transition={{duration:1}}
               className={style.popup}>
                 <div className={style.popupHead}>
                   Билеты
@@ -124,9 +125,11 @@ const Contacts: React.FC<ContactsProps> = (props: ContactsProps) => {
                       )
                   })}
                 </div>
-                <button className={style.popupButton}>
+                <a 
+                href={cost[props.numberOfPage-1]}
+                className={style.popupButton}>
                   Купить билеты
-                </button>
+                </a>
               </motion.div>
             </motion.div>
           )}

@@ -32,8 +32,6 @@
 .textContacts > span:nth-child(2n) {
   text-align: right;
 }
-.lineTextHead {
-}
 .shadow {
   height: 3rem;
   width: 100%;
@@ -92,7 +90,7 @@
 }
 
 .popupBackground {
-  background: #11111133;
+  background: #11111155;
   position: fixed;
   top: 0;
   left: 0;
@@ -152,6 +150,8 @@
   align-self: end;
   background: #fff;
   color: #111;
+  transition: .2s ease-in;
+  border-radius: .25rem;
 }
 .popupButton:hover {
   opacity: 1;
