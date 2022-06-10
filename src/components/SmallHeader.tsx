@@ -11,7 +11,7 @@ interface SmallHeaderProps {
 const SmallHeader: React.FC<SmallHeaderProps> = (props: SmallHeaderProps) => {
   return (
     <AnimatePresence>
-      {props.headerVisible && 
+      {/* {props.headerVisible &&  */}
         <motion.div 
         initial={{y: '-100%'}}
         animate={{y: '0'}}
@@ -32,7 +32,7 @@ const SmallHeader: React.FC<SmallHeaderProps> = (props: SmallHeaderProps) => {
             </Link>
           </div>
         </motion.div>
-      }
+      {/* } */}
     </AnimatePresence>
   )
 }

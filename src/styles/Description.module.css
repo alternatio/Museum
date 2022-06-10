@@ -1,5 +1,7 @@
 .Description {
   padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .head {
@@ -14,6 +16,7 @@
   overflow: hidden;
   position: relative;
   text-align: justify;
+  align-self: center;
 }
 .textContacts {
   font-size: 1.2rem;

@@ -28,8 +28,8 @@ const Block: React.FC<BlockProps> = (props: BlockProps) => {
   const [open, switchOpen] = useState(false)
 
   const variants = {
-    open: {height: '7rem', width: '100%'},
-    closed: {height: 'auto', width: 'min(100%, 50rem)'},
+    open: {height: '7rem', width: '100%', 'margin-top': 0},
+    closed: {height: 'auto', width: 'min(100%, 50rem)', 'margin-top': '3rem'},
   }
 
   return (
@@ -44,7 +44,7 @@ const Block: React.FC<BlockProps> = (props: BlockProps) => {
         animate={open ? 'closed' : 'open'}
         transition={{duration: 1, type: 'spring'}}
         className={style.text}>
-          {textOfDescription[props.numberOfText]}
+          &nbsp;&nbsp;&nbsp;&nbsp;{textOfDescription[props.numberOfText]}
           <div 
           content={open.toString()}
           className={style.shadow}></div>

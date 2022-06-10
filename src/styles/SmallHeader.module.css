@@ -16,12 +16,12 @@
 }
 
 .logo {
-  border-bottom: #111 solid 1px;
+  border-bottom: #111 solid 2px;
   padding: 0 3rem;
 }
 .logo, .logo > span {
   font-family: Playfair;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: .2s ease-in;
   text-transform: uppercase;
   color: #000;

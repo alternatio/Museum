@@ -38,8 +38,8 @@
 }
 
 .image {
-  width: 96%;
-  height: 96%;
+  width: 98%;
+  height: 98%;
   object-fit: cover;
   transition: .3s ease-in-out;
   border-radius: .5rem;
