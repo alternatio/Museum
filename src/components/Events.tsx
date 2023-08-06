@@ -52,6 +52,7 @@ const Events: React.FC<EventsProps> = ({changeCursorEvent, changeContentShow}) =
             imageData.map((value, index) => {
               const image: string = require('../images/grid' + (index + 1) + '.jpg')
               return (
+                // eslint-disable-next-line jsx-a11y/img-redundant-alt
                 <img
                 className={style.image}
                 draggable={false}
@@ -64,7 +65,9 @@ const Events: React.FC<EventsProps> = ({changeCursorEvent, changeContentShow}) =
                   changeCursorEvent('')
                 }}
                 src={image} 
-                content={imageData[index]}/>
+                content={imageData[index]}
+                alt={'image'}
+                />
               )
             })
           }
