@@ -1,6 +1,5 @@
 import React, {memo} from 'react'
 import style from '../styles/Footer.module.css'
-import Link from 'react-router-dom'
 
 interface FooterProps {
   changeCursorEvent: Function
