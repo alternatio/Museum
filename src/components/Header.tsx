@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import style from '../styles/Header.module.css'
 import OnView from './OnView';
 import { motion } from 'framer-motion';
@@ -68,4 +68,4 @@ Header.defaultProps = {
   textOfPage: 'Имени Врубеля'
 }
 
-export default Header
+export default memo(Header)

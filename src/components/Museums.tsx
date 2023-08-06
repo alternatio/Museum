@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import style from '../styles/Museums.module.css'
 import OnView from './OnView'
 import { Link } from 'react-router-dom';
@@ -41,4 +41,4 @@ const Museums: React.FC<MuseumsProps> = (props: MuseumsProps) => {
   )
 }
 
-export default Museums
+export default memo(Museums)

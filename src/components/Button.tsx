@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import style from '../styles/Button.module.css'
 
 interface ButtonProps {
@@ -36,4 +36,4 @@ Button.defaultProps = {
   enableBorder: true
 }
 
-export default Button
+export default memo(Button)

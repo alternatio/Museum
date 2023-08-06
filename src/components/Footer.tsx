@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import style from '../styles/Footer.module.css'
 import Link from 'react-router-dom'
 
@@ -54,4 +54,4 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   )
 }
 
-export default Footer
+export default memo(Footer)

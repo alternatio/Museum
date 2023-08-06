@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import { motion } from 'framer-motion'
 
 interface OnViewProps {
@@ -29,4 +29,4 @@ OnView.defaultProps = {
   scale: 1
 }
 
-export default OnView
+export default memo(OnView)

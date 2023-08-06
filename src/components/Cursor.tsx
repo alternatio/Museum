@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import style from '../styles/Cursor.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -40,4 +40,4 @@ const Cursor: React.FC<CursorProps> = ({mousePosX, mousePosY, contentShow, curso
   )
 }
 
-export default Cursor
+export default memo(Cursor)

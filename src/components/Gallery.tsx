@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {memo, useState} from 'react'
 import style from '../styles/Gallery.module.css'
 import data from './dataOfGallery'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -75,4 +75,4 @@ const Gallery: React.FC = () => {
   )
 }
 
-export default Gallery
+export default memo(Gallery)

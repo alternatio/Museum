@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {memo, useState} from 'react'
 import style from '../styles/Description.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import textOfDescription from './dataOfDescription'
@@ -192,4 +192,4 @@ const Description: React.FC<DescriptionProps> = (props: DescriptionProps) => {
   
 }
 
-export default Description
+export default memo(Description)

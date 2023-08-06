@@ -1,11 +1,6 @@
-import React, { useState } from 'react'
+import React, {memo, useState} from 'react'
 import style from '../styles/Events.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
-
-
-
-
-
 
 const imageData: string[] = [
   'Авторский лекторий «Как это понимать?»',
@@ -57,7 +52,7 @@ const Events: React.FC<EventsProps> = ({changeCursorEvent, changeContentShow}) =
             imageData.map((value, index) => {
               const image: string = require('../images/grid' + (index + 1) + '.jpg')
               return (
-                <img 
+                <img
                 className={style.image}
                 draggable={false}
                 onMouseEnter={() => {
@@ -88,4 +83,4 @@ const Events: React.FC<EventsProps> = ({changeCursorEvent, changeContentShow}) =
   )
 }
 
-export default Events
+export default memo(Events)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import style from '../styles/SmallHeader.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom';
@@ -41,4 +41,4 @@ SmallHeader.defaultProps = {
   headerVisible: true
 }
 
-export default SmallHeader
+export default memo(SmallHeader)
