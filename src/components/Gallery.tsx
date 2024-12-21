@@ -26,7 +26,7 @@ const Gallery: React.FC = () => {
   }
 
   useEffect(() => {
-    changeArrayOfNumber(shuffle(arrayOfNumber));
+    changeArrayOfNumber((arrayOfNumber) => shuffle(arrayOfNumber));
   }, []);
 
   return (
