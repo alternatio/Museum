@@ -4,7 +4,6 @@ import style from "../styles/Gallery.module.css";
 import data from "./dataOfGallery";
 
 const Gallery: React.FC = () => {
-  const countPictures: number = 13;
   const [arrayOfNumber, changeArrayOfNumber] = useState<number[]>([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
   ]);
@@ -13,13 +12,10 @@ const Gallery: React.FC = () => {
     let currentIndex = array.length;
     let result: number[] = [...array];
 
-    // While there remain elements to shuffle...
     while (currentIndex !== 0) {
-      // Pick a remaining element...
       let randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      // And swap it with the current element.
       [result[currentIndex], result[randomIndex]] = [
         result[randomIndex],
         result[currentIndex],
